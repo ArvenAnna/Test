@@ -9,4 +9,16 @@ public class MyInitTest extends MyInitTestParent {
     MyInitTest(int id){
         this.id=id;
     }
+    private double[] arr = new double[5];
+    {
+        for(int i = 0; i < 5; i++){
+            arr[i] = Math.random() * 100;
+        }
+    }
+
+    public void printArray(){
+        for(int b = 0; b < 5; b++){
+            System.out.println(arr[b]);
+        }
+    }
 }
