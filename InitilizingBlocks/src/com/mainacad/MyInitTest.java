@@ -1,7 +1,7 @@
 package com.mainacad;
 
 public class MyInitTest extends MyInitTestParent {
-    private int id;
+    private final int id;
 
     public int getId() {
         return id;
