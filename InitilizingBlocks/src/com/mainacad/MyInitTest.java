@@ -1,5 +1,4 @@
 package com.mainacad;
 
-public class MyInitTest{
-
+public class MyInitTest extends MyInitTestParent {
 }
