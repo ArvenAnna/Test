@@ -1,4 +1,4 @@
-package TestTeamProject;
+package com.mainacad;
 
 /*
 area of a circle | S = Пr2 (квадрат)

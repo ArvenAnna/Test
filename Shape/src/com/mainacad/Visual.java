@@ -1,7 +1,5 @@
 package com.mainacad;
 
-import TestTeamProject.Hexagon;
-import TestTeamProject.Point;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
