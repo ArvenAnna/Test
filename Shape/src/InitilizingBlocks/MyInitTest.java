@@ -1,4 +1,4 @@
-package com.mainacad;
+package InitilizingBlocks;
 
 public class MyInitTest {
     private int id;
@@ -10,3 +10,4 @@ public class MyInitTest {
         this.id=id;
     }
 }
+
