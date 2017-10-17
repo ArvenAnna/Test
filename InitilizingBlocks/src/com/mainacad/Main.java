@@ -7,5 +7,7 @@ public class Main {
         MyInitTest obj2 = new MyInitTest(30);
         System.out.println(obj.getId());
         System.out.println(obj2.getId());
+        MyInitTest test = new MyInitTest();
+        test.printArray();
     }
 }
