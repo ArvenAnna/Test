@@ -1,1 +1,3 @@
-/Shape/out/
+*.iml
+*/out/*
+.idea

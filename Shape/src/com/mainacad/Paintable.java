@@ -1,6 +1,5 @@
 package com.mainacad;
 
-import TestTeamProject.Point;
 import javafx.scene.paint.Color;
 
 public interface Paintable {

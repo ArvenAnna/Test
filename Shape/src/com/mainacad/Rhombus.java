@@ -1,4 +1,4 @@
-package TestTeamProject;
+package com.mainacad;
 
     // НЕ ТРОГАТЬ!!!
     // Собственность ~@NPG@~

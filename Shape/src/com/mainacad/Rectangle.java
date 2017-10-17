@@ -1,4 +1,4 @@
-package TestTeamProject;
+package com.mainacad;
 
 public class Rectangle implements Constructable{
 

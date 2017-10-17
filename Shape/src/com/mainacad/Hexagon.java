@@ -1,6 +1,5 @@
-package TestTeamProject;
+package com.mainacad;
 
-import com.mainacad.Paintable;
 import javafx.scene.paint.Color;
 
 public class Hexagon implements Constructable, Paintable {

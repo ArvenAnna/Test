@@ -1,6 +1,5 @@
-package TestTeamProject;
+package com.mainacad;
 
-import com.mainacad.Paintable;
 import javafx.scene.paint.Color;
 
 public class Square implements Constructable, Paintable {
@@ -55,6 +54,12 @@ public class Square implements Constructable, Paintable {
 
     @Override
     public Point[] getPoints() {
-        return points;
+        Point[] copyPoints = new Point[POINTS_COUNT];
+        int i = 0;
+        for (Point point : points) {
+            copyPoints[i] = new Point(point.getX(), point.getY());
+            i++;
+        }
+        return copyPoints;
     }
 }

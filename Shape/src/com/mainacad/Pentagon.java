@@ -1,4 +1,4 @@
-package TestTeamProject;
+package com.mainacad;
 //
 public class Pentagon implements Constructable {
     private int heightPentagon;
