@@ -6,8 +6,9 @@ public class MyInitTest extends MyInitTestParent {
     public int getId() {
         return id;
     }
-    MyInitTest(int id){
-        this.id=id;
+
+    MyInitTest(int id) {
+        this.id = id;
     }
     private double[] arr = new double[5];
     {
