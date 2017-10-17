@@ -10,7 +10,7 @@ public class MyInitTest extends MyInitTestParent {
     MyInitTest(int id) {
         this.id = id;
     }
-    private double[] arr = new double[5];
+    private final double[] arr = new double[5];
     {
         for(int i = 0; i < 5; i++){
             arr[i] = Math.random() * 100;
