@@ -17,7 +17,7 @@ public class Visual extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Drawing Paintable shape Test");
         Group root = new Group();
-        Canvas canvas = new Canvas(300, 250);
+        Canvas canvas = new Canvas(450, 350);
         GraphicsContext gc = canvas.getGraphicsContext2D();
         testShape(gc);
         root.getChildren().add(canvas);
@@ -26,16 +26,15 @@ public class Visual extends Application {
     }
 
     private void testShape(GraphicsContext gc) {
-        Point p1 = new Point(70,10);
-        Point p2 = new Point(130,10);
-        Point p3 = new Point(160,60);
-        Point p4 = new Point(130,110);
-        Point p5 = new Point(70,110);
-        Point p6 = new Point(40,60);
+        Point p1 = new Point(50,50);
+        Point p4 = new Point(50,100);
+        Point p3 = new Point(100,100);
+        Point p2 = new Point(100,50);
 
-        Paintable hexagon = new Hexagon(new Point[]{p1, p2, p3, p4, p5, p6});
 
-        drawShape(gc, hexagon);
+       Paintable square = new Square(new Point[]{p1, p2, p3, p4});
+
+        drawShape(gc, square);
     }
 
     private void drawShape(GraphicsContext gc, Paintable shape) {
