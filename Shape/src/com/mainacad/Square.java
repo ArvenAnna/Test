@@ -2,7 +2,7 @@ package com.mainacad;
 
 import javafx.scene.paint.Color;
 
-public class Square extends Realisation  {
+public class Square extends Shape  {
 
     public Square(Point[] points) {
         super(points,4);

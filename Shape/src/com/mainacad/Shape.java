@@ -1,8 +1,8 @@
 package com.mainacad;
 
-public abstract class Realisation implements Constructable, Paintable {
-    private final int POINTS_COUNT;
-    private final Point[] points;
+public abstract class Shape implements Constructable, Paintable {
+    protected int POINTS_COUNT;
+    protected Point[] points;
 
     public Realisation(Point[] points, int POINTS_COUNT) {
         this.POINTS_COUNT = POINTS_COUNT;
