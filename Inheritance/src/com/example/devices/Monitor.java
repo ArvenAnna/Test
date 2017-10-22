@@ -3,8 +3,9 @@ package com.example.devices;
 import com.example.common.Device;
 
 public class Monitor extends Device {
+    //Alexey Syrovatko
     private int resolutionX;
-    private int resolutionY;
+    private int getResolutionY;
 
     public int getResolutionX() {
         return resolutionX;
@@ -14,13 +15,14 @@ public class Monitor extends Device {
         this.resolutionX = resolutionX;
     }
 
-    public int getResolutionY() {
-        return resolutionY;
+    public int getGetResolutionY() {
+        return getResolutionY;
     }
 
-    public void setResolutionY(int resolutionY) {
-        this.resolutionY = resolutionY;
+    public void setGetResolutionY(int getResolutionY) {
+        this.getResolutionY = getResolutionY;
     }
+    //Alexey Syrovatko
 
     public void getParameters() {
         System.out.println("resolutionX");

@@ -2,9 +2,10 @@ package com.example.common;
 
 public class Device {
 
+    //Alexey Syrovatko
     private String manufacturer;
-    private String serialnumber;
     private float price;
+    private String serialNumber;
 
     public String getManufacturer() {
         return manufacturer;
@@ -14,14 +15,6 @@ public class Device {
         this.manufacturer = manufacturer;
     }
 
-    public String getSerialnumber() {
-        return serialnumber;
-    }
-
-    public void setSerialnumber(String serialnumber) {
-        this.serialnumber = serialnumber;
-    }
-
     public float getPrice() {
         return price;
     }
@@ -29,6 +22,15 @@ public class Device {
     public void setPrice(float price) {
         this.price = price;
     }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+    //Alexey Syrovatko
 
     public void getParameters() {
         System.out.println("manufacturer");

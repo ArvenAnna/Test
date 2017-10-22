@@ -4,6 +4,7 @@ import com.example.common.Device;
 
 public class EthernetAdapter extends Device {
 
+    //AlexeySyrovatko
     private int speed;
     private String mac;
 
@@ -22,6 +23,7 @@ public class EthernetAdapter extends Device {
     public void setMac(String mac) {
         this.mac = mac;
     }
+    //Alexey Syrovatko
 
     public void getParameters() {
         System.out.println("speed");
