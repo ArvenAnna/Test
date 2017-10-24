@@ -1,7 +1,9 @@
 package com.mainacad;
 
 public interface Queue {
-    public static boolean add(String name){
-        
+     boolean add(String name);
+     boolean remove();
+     boolean isEmpty();
+     boolean element();
+
     }
-}
