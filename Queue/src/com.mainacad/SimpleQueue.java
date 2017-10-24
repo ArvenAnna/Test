@@ -7,13 +7,12 @@ public class SimpleQueue implements Queue {
 
     private String[] arrName = new String[5];
 
+    public int i = 0;
 
     @Override
     public boolean add(String name){
-        int i = 0;
-        arrName[i]=name;
-        System.out.println(arrName[i]);
-        i++;
+        arrName[i]= name;
+        this.i++;
         return true;
     }
     @Override
@@ -24,16 +23,16 @@ public class SimpleQueue implements Queue {
             arrName[a-1]= arrName[a];
         }
 
-
         return false;
     }
     @Override
     public boolean isEmpty(){
-        return false;
+        return arrName[0]==null;
+
     }
     @Override
-    public boolean element(){
-        return false;
+    public String element(){
+        return arrName[0];
     }
 }
 

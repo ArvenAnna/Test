@@ -8,24 +8,18 @@ public class Main {
         queue.add("Sasha");
         queue.add("Pasha");
 
-//        String [] arr2 =queue.getArrName();
         queue.remove();
-        for(int a =0; a< 3; a++ ){
-            System.out.println(queue.getArrName()[a]);
+        queue.remove();
+        System.out.println(queue.element()); //"Sasha"
+//        for(int a =0; a< 3; a++ ){
+//            System.out.println(queue.getArrName()[a]);
+//        }
 
-//            System.out.println(arr2[a]);
-        }
+        System.out.println(queue.isEmpty()); //false
 
-
-
-
-//        System.out.println(queue.element()); //"Sasha"
-//
-//        System.out.println(queue.isEmpty()); //false
-//
-//        queue.remove();
-//        queue.remove();
-//        System.out.println(queue.isEmpty());// true
+        queue.remove();
+        queue.remove();
+        System.out.println(queue.isEmpty());// true
 
     }
 }
