@@ -5,7 +5,7 @@ public class SimpleQueue implements Queue {
         return arrName;
     }
 
-    private String[] arrName = new String[2];
+    private String[] arrName = new String[5];
 
 
     @Override
@@ -18,6 +18,13 @@ public class SimpleQueue implements Queue {
     }
     @Override
     public boolean remove(){
+
+        arrName[0]= null;
+        for(int a =1; a< arrName.length; a++ ){
+            arrName[a-1]= arrName[a];
+        }
+
+
         return false;
     }
     @Override
