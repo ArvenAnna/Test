@@ -1,12 +1,18 @@
 package com.mainacad;
 //too serious team
 public class SimpleQueue implements Queue {
+    public String[] getArrName() {
+        return arrName;
+    }
+
     private String[] arrName = new String[2];
+
 
     @Override
     public boolean add(String name){
         int i = 0;
         arrName[i]=name;
+        System.out.println(arrName[i]);
         i++;
         return true;
     }
