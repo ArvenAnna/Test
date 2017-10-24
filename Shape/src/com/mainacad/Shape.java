@@ -4,7 +4,7 @@ public abstract class Shape implements Constructable, Paintable {
     protected int POINTS_COUNT;
     protected Point[] points;
 
-    public Realisation(Point[] points, int POINTS_COUNT) {
+    public Shape(Point[] points, int POINTS_COUNT) { //changed by Zhuravel Andrey, was = public Realisation)
         this.POINTS_COUNT = POINTS_COUNT;
         if (points.length != POINTS_COUNT) {
             throw new IllegalArgumentException("Square must contain" + POINTS_COUNT + "point");
