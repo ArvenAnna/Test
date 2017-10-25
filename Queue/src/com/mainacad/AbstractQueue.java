@@ -1,22 +1,23 @@
 package src.com.mainacad;
 
 /**
- * Zhuravel Andrey: add abstract class AbstractQueue and add method reverseOrder
+ * Sasha Z. and Andrey Z.: Add abstract class AbstractQueue
+ * Andrey Z.: Add method reverseOrder
  */
 
-/* Start comment Andrey Zhuravel*/
- /* End comment Andrey Zhuravel*/
 abstract class AbstractQueue implements Queue {
     private int i = 0;
     protected String[] arrName = new String[2];
 
-    void reverseOrder(String[] arrName) {
+    /* Start comment Andrey Zhuravel*/
+    void reverseOrder() {
 
         for (int i = arrName.length - 1; i >= 0; i--) {
 
             System.out.println(arrName[i]);
         }
     }
+    /* End comment Andrey Zhuravel*/
 
     @Override
     public boolean add(String name) {
