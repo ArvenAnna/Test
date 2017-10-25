@@ -8,6 +8,7 @@ public class Main {
         queue.add("Sasha");
         queue.add("Pasha");
 
+        queue.reverseOrder(queue.getArrName()); /*Andrey Zhuravel comment: void reverseOrder method from AbstractQueue class*/
 
         queue.remove();
         queue.remove();

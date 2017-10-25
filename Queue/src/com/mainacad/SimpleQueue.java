@@ -3,7 +3,7 @@ package src.com.mainacad;
 import src.com.mainacad.Queue;
 
 //too serious team
-public class SimpleQueue implements Queue {
+public class SimpleQueue extends AbstractQueue implements Queue { /*Andrey Zhuravel comment: extends SimpleQueue from  AbstractQueue*/
     public String[] getArrName() {
         return arrName;
     }
