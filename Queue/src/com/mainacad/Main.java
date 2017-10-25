@@ -8,7 +8,7 @@ public class Main {
         queue.add("Sasha");
         queue.add("Pasha");
 
-        queue.reverseOrder(queue.getArrName()); /*Andrey Zhuravel comment: void reverseOrder method from AbstractQueue class*/
+   //     queue.reverseOrder(queue.getArrName()); /*Andrey Zhuravel comment: void reverseOrder method from AbstractQueue class*/
 
         queue.remove();
         queue.remove();
@@ -16,9 +16,9 @@ public class Main {
 
         System.out.println(queue.element()); //"Sasha"
 
-        for (int a = 0; a < queue.getArrName().length; a++) {
-            System.out.println(queue.getArrName()[a]);
-        }
+//        for (int a = 0; a < queue.getArrName().length; a++) {
+//            System.out.println(queue.getArrName()[a]);
+//        }
 
         System.out.println(queue.isEmpty()); //false
 

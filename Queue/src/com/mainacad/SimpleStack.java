@@ -1,30 +1,8 @@
 package src.com.mainacad;
-/*
-* Sasha Zhurylo
-* I create new class which execute condition first input last output
-*/
-public class SimpleStack implements Queue {
 
-    private String[] arrName = new String[4];
+import java.util.Arrays;
 
-    public int i = 0;
-
-    @Override
-    public boolean add(String name) {
-        if (i == arrName.length) {
-            String arrNameCopy[] = arrName;
-            arrName = new String[arrNameCopy.length * 2];
-            for (int j = 0; j < arrNameCopy.length; j++) {
-                arrName[j] = arrNameCopy[j];
-            }
-            arrName[i] = name;
-            i++;
-        } else {
-            arrName[i] = name;
-            i++;
-        }
-        return true;
-    }
+public class SimpleStack extends AbstractQueue implements Queue {
 
     @Override
     public boolean remove() {
@@ -38,17 +16,9 @@ public class SimpleStack implements Queue {
     }
 
     @Override
-    public boolean isEmpty() {
-        return arrName[0] == null;
-
-    }
-
-    @Override
-    public String element() {
-        return arrName[0];
-    }
-
-    public String[] getArrName() {
-        return arrName;
+    public String toString() {
+        return "SimpleStack{" +
+                "arrName=" + Arrays.toString(arrName) +
+                '}';
     }
 }
