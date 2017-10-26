@@ -20,12 +20,12 @@ public class Main {
 //            System.out.println(queue.getArrName()[a]);
 //        }
 
-        System.out.println(queue.isEmpty()); //false
-
-        queue.remove();
-        queue.remove();
-
-        System.out.println(queue.isEmpty());// true
+//        System.out.println(queue.isEmpty()); //false
+//
+//        queue.remove();
+//        queue.remove();
+//
+//        System.out.println(queue.isEmpty());// true
 
     }
 }
