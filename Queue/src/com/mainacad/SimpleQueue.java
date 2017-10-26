@@ -1,4 +1,4 @@
-package src.com.mainacad;
+package com.mainacad;
 
 
 import java.util.Arrays;

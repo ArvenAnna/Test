@@ -1,4 +1,4 @@
-package src.com.mainacad;
+package com.mainacad;
 
 public interface Queue {
     boolean add(String name);

@@ -1,4 +1,4 @@
-package src.com.mainacad;
+package com.mainacad;
 
 /**
  * Sasha Z. and Andrey Z.: Add abstract class AbstractQueue
