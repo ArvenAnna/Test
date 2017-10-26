@@ -2,7 +2,7 @@ package com.mainacad;
 
 public class Main {
     public static void main(String[] args) {
-        SimpleQueue queue = new SimpleQueue();
+        Queue queue = new SimpleQueue();
 
         queue.add("Masha");
         queue.add("Sasha");

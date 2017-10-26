@@ -8,4 +8,6 @@ public interface Queue {
     boolean isEmpty();
 
     String element();
+
+    void reverseOrder();
 }

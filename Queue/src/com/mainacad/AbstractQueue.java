@@ -10,7 +10,7 @@ abstract class AbstractQueue implements Queue {
     protected String[] arrName = new String[2];
 
     /* Start comment Andrey Zhuravel*/
-    void reverseOrder() {
+    public void reverseOrder() {
 
         for (int i = arrName.length - 1; i >= 0; i--) {
 
