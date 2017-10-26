@@ -16,9 +16,21 @@ public class SimpleStack extends AbstractQueue implements Queue {
     }
 
     @Override
+    public String element() {
+        for (int i = arrName.length - 1; i > 0; i--) {
+            if (arrName[i] != null) {
+                System.out.println(arrName[i]);
+                break;
+            }
+        }
+        return "";
+    }
+
+    @Override
     public String toString() {
         return "SimpleStack{" +
                 "arrName=" + Arrays.toString(arrName) +
                 '}';
     }
+
 }

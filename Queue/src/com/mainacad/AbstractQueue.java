@@ -7,7 +7,7 @@ package com.mainacad;
 
 abstract class AbstractQueue implements Queue {
     private int i = 0;
-    protected String[] arrName = new String[2];
+    protected String[] arrName = new String[12];
 
     /* Start comment Andrey Zhuravel*/
     public void reverseOrder() {
@@ -15,7 +15,7 @@ abstract class AbstractQueue implements Queue {
         int a = arrName.length;
         String[] reverse = new String[a];
         for (int i = arrName.length - 1; i >= 0; i--) {
-            reverse[i] = arrName[a-i-1];
+            reverse[i] = arrName[a - i - 1];
             System.out.println(arrName[i]);
         }
     }
