@@ -11,6 +11,9 @@ public class Main {
         System.out.println(queue.toString());
         System.out.println(queue.element());
 
+        queue.removeAll();
+        System.out.println(queue.toString());
+
 
         //queue.reverseOrder(); /*Andrey Zhuravel comment: void reverseOrder method from AbstractQueue class*/
 

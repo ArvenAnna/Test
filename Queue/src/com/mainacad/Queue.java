@@ -10,4 +10,6 @@ public interface Queue {
     String element();
 
     void reverseOrder();
+
+    void removeAll();
 }

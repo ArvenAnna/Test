@@ -21,6 +21,15 @@ abstract class AbstractQueue implements Queue {
     }
     /* End comment Andrey Zhuravel*/
 
+    /* Alexey Syrovatko */
+    @Override
+    public void removeAll() {
+        for (int i = 0; i < arrName.length; i++){
+            arrName[i] = null;
+        }
+    }
+    /* Alexey Syrovatko */
+
     @Override
     public boolean add(String name) {
         if (i == arrName.length) {
