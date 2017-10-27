@@ -28,7 +28,7 @@ public class Hexagon implements Constructable, Paintable {
 
     @Override
     public double perimetrShape() {
-        Otrezok otr = new Otrezok();
+        Otrezok otr = new Otrezok(12.5, 56.1, 4.8, 56.6);
         double perimeter = 0;
         for (int i = 1; i < POINTS_COUNT; i++) {
             perimeter += otr.lang(points[i - 1].getX(), points[i].getX(), points[i - 1].getY(), points[i].getY());
