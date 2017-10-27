@@ -1,35 +1,24 @@
 package com.mainacad;
 
-public class Rectangle implements Constructable{
+import javafx.scene.paint.Color;
 
-    private int heightRectangle;
-    private int widthRectangle;
+/**
+ * This class create Rectangle shape using Points in Shape class and use paintingShape method and Color method
+ */
 
-    public int getWidthRectangle(){
-        return widthRectangle;
-    }
+public class Rectangle extends Shape { //changed by Zhuravel Andrey, inheritance from Shape class)
 
-    public void setWidthRectangle(int widthRectangle){
-        this.widthRectangle=widthRectangle;
-    }
-
-    public int getHeightRectangle(){
-        return heightRectangle;
-    }
-
-    public void setHeightRectangle(int heightRectangle){
-        this.heightRectangle=heightRectangle;
+    public Rectangle(Point[] points) {
+        super(points, 4);
     }
 
     @Override
-    public double areaShape(){
-        return (heightRectangle * widthRectangle);
+    public void paintingShape() {
+        System.out.println("This is my rectangle");
     }
+
     @Override
-    public double perimetrShape(){
-        return (heightRectangle+heightRectangle+widthRectangle+widthRectangle);
-    }
-    public void paintingShape(){
-        System.out.println("You painting my Rectangle");
+    public Color getColor() {
+        return Color.GREEN;
     }
 }

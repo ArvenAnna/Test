@@ -4,7 +4,7 @@ public abstract class Shape implements Constructable, Paintable {
     protected int POINTS_COUNT;
     protected Point[] points;
 
-    public Shape(Point[] points, int POINTS_COUNT) {
+    public Shape(Point[] points, int POINTS_COUNT) { //changed by Zhuravel Andrey, was = public Realisation)
         this.POINTS_COUNT = POINTS_COUNT;
         if (points.length != POINTS_COUNT) {
             throw new IllegalArgumentException("Square must contain" + POINTS_COUNT + "point");
@@ -20,7 +20,7 @@ public abstract class Shape implements Constructable, Paintable {
 
     @Override
     public double areaShape() {
-        Otrezok otrezok = new Otrezok(12.2, 45.3, 5.8, 78.6);
+        Otrezok otrezok = new Otrezok();
         double area = 0;
         for (int i = 1; i < POINTS_COUNT - 1; i++) {
             area += otrezok.lang(points[i - 1].getX(), points[0].getX(), points[i - 1].getY(), points[0].getY());
@@ -32,7 +32,7 @@ public abstract class Shape implements Constructable, Paintable {
 
     @Override
     public double perimetrShape() {
-        Otrezok otr = new Otrezok(12.2, 45.3, 5.8, 78.6);
+        Otrezok otr = new Otrezok();
         double perimeter = 0.0;
         for (int i = 1; i < POINTS_COUNT; i++) {
             perimeter += otr.lang(points[i - 1].getX(), points[i].getX(), points[i - 1].getY(), points[i].getY());
