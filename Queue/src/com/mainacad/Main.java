@@ -10,7 +10,12 @@ public class Main {
 
         System.out.println(queue.toString());
         System.out.println(queue.element());
-
+        try {
+            queue.remove();
+        }
+        catch (MyException e){
+            System.out.println(e.getMessage());
+        }
         queue.removeAll();
         System.out.println(queue.toString());
 
