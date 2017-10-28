@@ -2,49 +2,16 @@ package com.mainacad;
 
 import javafx.scene.paint.Color;
 
-public class Hexagon implements Constructable, Paintable {
-
-    private static final int POINTS_COUNT = 6;
-
-    private final Point[] points;
+public class Hexagon extends Shape {
 
     public Hexagon(Point[] points) {
-        if (points.length != POINTS_COUNT) {
-            throw new IllegalArgumentException("Hexagon must contain 6 point");
-        }
-        Point[] copyPoints = new Point[POINTS_COUNT];
-        int i = 0;
-        for (Point point : points) {
-            copyPoints[i] = new Point(point.getX(), point.getY());
-            i++;
-        }
-        this.points = copyPoints;
+        super(points,6);
     }
 
-    @Override
-    public double areaShape() {
-        throw new UnsupportedOperationException("Will be implemented next age");
-    }
-
-    @Override
-    public double perimetrShape() {
-        Otrezok otr = new Otrezok(12.5, 56.1, 4.8, 56.6);
-        double perimeter = 0;
-        for (int i = 1; i < POINTS_COUNT; i++) {
-            perimeter += otr.lang(points[i - 1].getX(), points[i].getX(), points[i - 1].getY(), points[i].getY());
-        }
-        perimeter += otr.lang(points[POINTS_COUNT - 1].getX(), points[0].getX(), points[POINTS_COUNT - 1].getY(), points[0].getY());
-        return perimeter;
-    }
 
     @Override
     public void paintingShape() {
         System.out.println("Hexagon");
-    }
-
-    @Override
-    public Point[] getPoints() {
-        return this.points;
     }
 
     @Override
