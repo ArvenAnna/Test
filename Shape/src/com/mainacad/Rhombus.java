@@ -1,41 +1,21 @@
 package com.mainacad;
 
-    // НЕ ТРОГАТЬ!!!
-    // Собственность ~@NPG@~
-    // P.S. Свой код восстановлю, а вот чужой испорчу)))
+import javafx.scene.paint.Color;
 
-public class Rhombus implements Constructable {
-    private int heightRhombus;
-    private int angleRhombus;
+public class Rhombus extends Shape {
 
-    public int getHeightRhombus() {
-        return heightRhombus;
+    public Rhombus(Point[] points) {
+        super(points,4);
     }
 
-    public void setHeightRhombus(int heightRhombus) {
-        this.heightRhombus = heightRhombus;
-    }
-
-    public int getAngleRhombus() {
-        return angleRhombus;
-    }
-
-    public void setAngleRhombus(int angleRhombus) {
-        this.angleRhombus = angleRhombus;
-    }
-
-    @Override
-    public double areaShape() {
-        return (heightRhombus * heightRhombus * Math.sin(angleRhombus));
-    }
-
-    @Override
-    public double perimetrShape() {
-        return heightRhombus * 4;
-    }
 
     @Override
     public void paintingShape() {
-        System.out.println("You painting ~@NPG@~'s Rhombus");
+        System.out.println("This is Rhombus");
+    }
+
+    @Override
+    public Color getColor() {
+        return Color.RED;
     }
 }
