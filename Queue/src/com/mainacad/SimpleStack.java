@@ -5,7 +5,10 @@ import java.util.Arrays;
 public class SimpleStack extends AbstractQueue implements Queue {
 
     @Override
-    public boolean remove() {
+    public boolean remove() throws MyException {
+        if (arrName.length<1){
+            throw new MyException("Queue is empty.Nothing to remove.");
+        }
         for (int j = arrName.length - 1; j > 0; j--) {
             if (arrName[j] != null) {
                 arrName[j] = null;
