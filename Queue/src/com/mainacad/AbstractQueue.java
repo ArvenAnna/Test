@@ -16,7 +16,7 @@ abstract class AbstractQueue implements Queue {
         String[] reverse = new String[a];
         for (int i = arrName.length - 1; i >= 0; i--) {
             reverse[i] = arrName[a - i - 1];
-            System.out.println(arrName[i]);
+
         }
     }
     /* End comment Andrey Zhuravel*/
