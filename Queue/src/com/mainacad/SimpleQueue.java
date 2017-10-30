@@ -9,7 +9,7 @@ public class SimpleQueue extends AbstractQueue implements Queue { /*Andrey Zhura
     @Override
     public boolean remove() throws MyException {
         if (arrName.length<1){
-            throw new MyException("Queue is empty.Nothing to remove.");
+            throw new MyException("Queue is empty. Nothing to remove.");
         }
         arrName[0] = null;
         for (int a = 1; a < arrName.length; a++) {

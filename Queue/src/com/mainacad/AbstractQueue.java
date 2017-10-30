@@ -1,5 +1,7 @@
 package com.mainacad;
 
+import java.util.Random;    // Vadym
+
 /**
  * Sasha Z. and Andrey Z.: Add abstract class AbstractQueue
  * Andrey Z.: Add method reverseOrder
@@ -29,6 +31,40 @@ abstract class AbstractQueue implements Queue {
         }
     }
     /* Alexey Syrovatko */
+
+
+    /* Start comment Vadym */
+    @Override
+    public String shuffle() {
+//        int length = arrName.length;
+//        for (int i = 0; i < length; i++) {
+//            String rnd = String.valueOf(Math.random() * length);
+//            String tmp = arrName[i];
+//            arrName[i] = arrName[rnd];
+//            arrName[rnd] = Arrays.tmp;
+//        }
+//    }
+
+//    static void shuffleArray(int[] ar) {
+        Random rnd = new Random();
+        for (int i = ar.length - 1; i > 0; i--) {
+            int index = rnd.nextInt(i + 1);
+            // Simple swap
+            int a = ar[index];
+            ar[index] = ar[i];
+            ar[i] = a;
+        }
+    }
+
+//        ArrayList<Integer> x = new ArrayList<Integer>();
+//        for (int i = 1; i <= shuf.length(); i++) {
+//            x.shuf(i);
+//        }
+//        Collections.shuffle(x);
+//    }
+
+    /* End comment Vadym */
+
 
     @Override
     public boolean add(String name) {

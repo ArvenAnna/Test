@@ -19,6 +19,9 @@ public class Main {
         queue.removeAll();
         System.out.println(queue.toString());
 
+        queue.shuffle();    // Vadym
+
+
 
         //queue.reverseOrder(); /*Andrey Zhuravel comment: void reverseOrder method from AbstractQueue class*/
 
