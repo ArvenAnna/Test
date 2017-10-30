@@ -28,4 +28,24 @@ public class Monitor extends Device {
         System.out.println("resolutionX");
         System.out.println("resolutionY");
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        Monitor monitor = (Monitor) o;
+
+        if (resolutionX != monitor.resolutionX) return false;
+        return getResolutionY == monitor.getResolutionY;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + resolutionX;
+        result = 31 * result + getResolutionY;
+        return result;
+    }
 }
