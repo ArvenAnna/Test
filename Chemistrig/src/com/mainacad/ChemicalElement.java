@@ -1,55 +1,78 @@
 package com.mainacad;
 
 public class ChemicalElement {
-    String name;
-    int sybol;
-    int atomicNumber;
 
-    public ChemicalElement(String name, int sybol, int atomicNumber) {
+    private String name;
+    private int elecrtonegatyvity;
+
+    ChemicalElement(String name) {
         this.name = name;
-        this.sybol = sybol;
-        this.atomicNumber = atomicNumber;
+        if (isTransitionMetals()) {
+            for (TransitionMetals transitionMetals : TransitionMetals.values()) {
+                if (transitionMetals.name().equals(name)) {
+                    elecrtonegatyvity = transitionMetals.getElecrtonegatyvity();
+                }
+            }
+        }
+        if (isMetalSare()) {
+            for (MetalSare metalSare : MetalSare.values()) {
+                if (metalSare.name().equals(name)) {
+                    this.elecrtonegatyvity = metalSare.getElecrtonegatyvity();
+
+                }
+            }
+        }
+        if (isAlcaiMetals()) {
+            for (AlkaiMetals alkaiMetals : AlkaiMetals.values()) {
+                if (alkaiMetals.name().equals(name)) {
+                    elecrtonegatyvity = alkaiMetals.getElecrtonegatyvity();
+                }
+            }
+        }
     }
 
-    public static boolean isAlcaiMetals(ChemicalElement e) {
+    public boolean isAlcaiMetals() {
         for (AlkaiMetals alkaiMetals : AlkaiMetals.values()) {
-            if (e.name.equals(alkaiMetals.name())) {
-                System.out.println("This element is AlkaiMetals");
+            if (name.equals(alkaiMetals.name())) {
                 return true;
             }
         }
-        System.out.println("This element is not AlkaiMetals");
         return false;
     }
 
-    public static boolean isTransitionMetals(ChemicalElement e) {
+    public boolean isTransitionMetals() {
         for (TransitionMetals transition : TransitionMetals.values()) {
-            if (transition.name().equals(e.name)) {
-                System.out.println("This element is Transition");
+            if (name.equals(transition.name())) {
                 return true;
             }
         }
-        System.out.println("This element is not Transition");
         return false;
     }
 
-    public static boolean isMetalSare(ChemicalElement e) {
+    public boolean isMetalSare() {
         for (MetalSare metalSare : MetalSare.values()) {
-            if (metalSare.name().equals(e.name)) {
-                System.out.println("This element is MetalSare");
+            if (name.equals(metalSare.name())) {
                 return true;
             }
         }
-        System.out.println("This element is not MetalSare");
         return false;
+    }
+
+
+    public int getElecrtonegatyvity() {
+        return elecrtonegatyvity;
+    }
+
+    public String getName() {
+
+        return name;
     }
 
     @Override
     public String toString() {
         return "ChemicalElement{" +
-                "name='" + name + '\'' +
-                ", sybol=" + sybol +
-                ", atomicNumber=" + atomicNumber +
+                "name = '" + name + '\'' +
+                ", elecrtonegatyvity = " + elecrtonegatyvity +
                 '}';
     }
 }

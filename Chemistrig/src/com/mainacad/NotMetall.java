@@ -15,8 +15,4 @@ enum NotMetall {
     public int getElecrtonegatyvity() {
         return elecrtonegatyvity;
     }
-
-    public void setElecrtonegatyvity(int elecrtonegatyvity) {
-        this.elecrtonegatyvity = elecrtonegatyvity;
-    }
 }
