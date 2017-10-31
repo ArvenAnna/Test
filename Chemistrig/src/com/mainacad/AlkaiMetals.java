@@ -10,7 +10,7 @@ enum AlkaiMetals {
 
     private int elecrtonegatyvity;
 
-    private AlkaiMetals(int elecrtonegatyvity){
+    private AlkaiMetals(int elecrtonegatyvity) {
         this.elecrtonegatyvity = elecrtonegatyvity;
     }
 
