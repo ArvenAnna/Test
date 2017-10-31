@@ -8,12 +8,14 @@ import static com.mainacad.AlkaiMetals.Cs;
 import static com.mainacad.AlkaiMetals.Li;
 import static com.mainacad.MetalSare.Ai;
 import static com.mainacad.MetalSare.Sn;
+import static com.mainacad.NotMetall.C;
+import static com.mainacad.NotMetall.H;
 import static java.lang.Enum.valueOf;
 
 public class Main {
     public static void main(String[] args) {
         ChemicalElement object = new ChemicalElement("Li", 3, 3);
-        ChemicalElement object2 = new ChemicalElement("Sn", 4, 10);
+        ChemicalElement object2 = new ChemicalElement("Sn", 14, 10);
         ChemicalElement object3 = new ChemicalElement("C", 5, 2);
         ChemicalElement[] arr = {object, object2, object3};
 
@@ -26,18 +28,15 @@ public class Main {
         Arrays.sort(arr, new Comparator<ChemicalElement>() {
                     @Override
                     public int compare(ChemicalElement o1, ChemicalElement o2) {
-                        if (o1.name.equals("C") || o2.name.equals("C")) {
-                            NotMetall.C.setElecrtonegatyvity(1);
-                            NotMetall.H.setElecrtonegatyvity(2);
-                            if (o1.atomicNumber > o2.atomicNumber)
-                                return -1;
-                            if (o2.atomicNumber > o1.atomicNumber)
-                                return 1;
-                        }
-                        if (o1.atomicNumber > o2.atomicNumber)
+                        if (o1.name.equals( "C")) {
                             return -1;
-                        if (o2.atomicNumber > o1.atomicNumber)
+                        } else if (o2.name.equals("C")) {
                             return 1;
+                        } else if (o1.sybol > o2.sybol) {
+                            return 1;
+                        } else if (o2.sybol > o1.sybol) {
+                            return -1;
+                        }
                         return 0;
 
                     }
