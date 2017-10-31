@@ -1,4 +1,4 @@
-package chemicalElement;
+package com.mainacad;
 
 import java.util.Comparator;
 

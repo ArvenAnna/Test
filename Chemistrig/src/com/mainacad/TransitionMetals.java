@@ -1,4 +1,4 @@
-package chemicalElement;
+package com.mainacad;
 
 enum  TransitionMetals {
     Hf(72),

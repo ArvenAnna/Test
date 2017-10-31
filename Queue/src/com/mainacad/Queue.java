@@ -12,4 +12,6 @@ public interface Queue {
     void reverseOrder();
 
     void removeAll();
+
+    int shuffle();  // Vadym
 }

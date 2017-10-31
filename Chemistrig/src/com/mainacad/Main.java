@@ -1,7 +1,5 @@
-import chemicalElement.ChemicalElement;
-import chemicalElement.ComparatorRlectroNegatinity;
+package com.mainacad;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Comparator;
 
