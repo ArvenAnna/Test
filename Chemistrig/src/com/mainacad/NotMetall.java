@@ -1,10 +1,9 @@
 package com.mainacad;
 
-enum NotMetall {
+enum NotMetall{
+
     C(6),
-    H(1),
-    I(56),
-    As(33);
+    H(1);
 
     private int elecrtonegatyvity;
 

@@ -1,23 +1,19 @@
 package com.mainacad;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import static com.mainacad.AlkaiMetals.Cs;
-import static com.mainacad.AlkaiMetals.Li;
-import static com.mainacad.MetalSare.Ai;
-import static com.mainacad.MetalSare.Sn;
-import static com.mainacad.NotMetall.C;
-import static com.mainacad.NotMetall.H;
-import static java.lang.Enum.valueOf;
-
 public class Main {
     public static void main(String[] args) {
+
         ChemicalElement object = new ChemicalElement("Li");
         ChemicalElement object2 = new ChemicalElement("Sn");
         ChemicalElement object3 = new ChemicalElement("C");
-        ChemicalElement[] arr = {object, object2, object3};
+        ChemicalElement object4 = new ChemicalElement(19);
+        ChemicalElement object5 = new ChemicalElement(49);
+        ChemicalElement object6 = new ChemicalElement(50);
+        ChemicalElement[] arr = {object,object2,object3,object4, object5, object6};
+
 
         // Arrays.sort(arr, new ComparatorRlectroNegatinity());
 
@@ -41,7 +37,6 @@ public class Main {
 
         for (ChemicalElement r : arr) {
             System.out.println(r);
-
         }
     }
 }

@@ -31,6 +31,27 @@ public class ChemicalElement {
         }
     }
 
+    ChemicalElement(int elecrtonegatyvity) {
+        this.elecrtonegatyvity = elecrtonegatyvity;
+
+        for (TransitionMetals transitionMetals : TransitionMetals.values()) {
+            if (transitionMetals.getElecrtonegatyvity() == elecrtonegatyvity) {
+                name = transitionMetals.name();
+            }
+        }
+        for (MetalSare metalSare : MetalSare.values()) {
+            if (metalSare.getElecrtonegatyvity() == elecrtonegatyvity) {
+                this.elecrtonegatyvity = metalSare.getElecrtonegatyvity();
+                name = metalSare.name();
+            }
+        }
+        for (AlkaiMetals alkaiMetals : AlkaiMetals.values()) {
+            if (alkaiMetals.getElecrtonegatyvity() == elecrtonegatyvity) {
+                name = alkaiMetals.name();
+            }
+        }
+    }
+
     public boolean isAlcaiMetals() {
         for (AlkaiMetals alkaiMetals : AlkaiMetals.values()) {
             if (name.equals(alkaiMetals.name())) {
