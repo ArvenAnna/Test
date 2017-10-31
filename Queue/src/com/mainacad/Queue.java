@@ -12,4 +12,7 @@ public interface Queue {
     void reverseOrder();
 
     void removeAll();
+
+
+    void shuffle();
 }

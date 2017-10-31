@@ -29,6 +29,8 @@ public class SimpleStack extends AbstractQueue implements Queue {
         return "";
     }
 
+
+
     @Override
     public String toString() {
         return "SimpleStack{" +

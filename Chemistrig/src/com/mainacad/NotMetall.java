@@ -1,6 +1,6 @@
-package chemicalElement;
+package com.mainacad;
 
-enum  NotMetall {
+enum NotMetall {
     C(6),
     H(1),
     I(56),
@@ -8,7 +8,7 @@ enum  NotMetall {
 
     private int elecrtonegatyvity;
 
-    private NotMetall(int elecrtonegatyvity){
+    private NotMetall(int elecrtonegatyvity) {
         this.elecrtonegatyvity = elecrtonegatyvity;
     }
 
@@ -16,4 +16,7 @@ enum  NotMetall {
         return elecrtonegatyvity;
     }
 
+    public void setElecrtonegatyvity(int elecrtonegatyvity) {
+        this.elecrtonegatyvity = elecrtonegatyvity;
+    }
 }

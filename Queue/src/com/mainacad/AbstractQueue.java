@@ -1,5 +1,8 @@
 package com.mainacad;
 
+import java.util.Arrays;
+import java.util.Random;
+
 /**
  * Sasha Z. and Andrey Z.: Add abstract class AbstractQueue
  * Andrey Z.: Add method reverseOrder
@@ -58,4 +61,17 @@ abstract class AbstractQueue implements Queue {
         return arrName[0];
     }
 
+
+    @Override
+    public  void shuffle() {
+        int index;
+        String temp;
+        Random random = new Random();
+        for (int i = arrName.length - 1; i > 0; i--) {
+            index = random.nextInt(i + 1);
+            temp = arrName[index];
+            arrName[index] = arrName[i];
+            arrName[i] = temp;
+        }
+    }
 }
