@@ -1,6 +1,6 @@
 package com.mainacad;
 
-enum  TransitionMetals {
+enum TransitionMetals {
     Hf(72),
     Ta(73),
     W(74),
@@ -12,12 +12,13 @@ enum  TransitionMetals {
 
     private int elecrtonegatyvity;
 
-    private TransitionMetals(int elecrtonegatyvity){
+    private TransitionMetals(int elecrtonegatyvity) {
         this.elecrtonegatyvity = elecrtonegatyvity;
     }
 
     public int getElecrtonegatyvity() {
         return elecrtonegatyvity;
     }
+
 
 }
