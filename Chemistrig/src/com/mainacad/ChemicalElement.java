@@ -1,17 +1,42 @@
-package chemicalElement;
+package com.mainacad;
 
 public class ChemicalElement {
     String name;
     int sybol;
     int atomicNumber;
 
-    public boolean isAlcaiMetals() {
-        throw new UnsupportedOperationException();
+    public ChemicalElement(String name, int sybol, int atomicNumber) {
+        this.name = name;
+        this.sybol = sybol;
+        this.atomicNumber = atomicNumber;
     }
-    public boolean isTransitionMetals(){
-        throw new UnsupportedOperationException();
+
+    public boolean isAlcaiMetals(AlkaiMetals e) {
+        for (AlkaiMetals alkaiMetals: AlkaiMetals.values()) {
+           if (alkaiMetals.getElecrtonegatyvity() == e.getElecrtonegatyvity()){
+               System.out.println(e.getElecrtonegatyvity());
+               return true;
+           }
+        }
+        return false;
+
     }
-    public boolean isMetalSare(){
-        throw new UnsupportedOperationException();
+    public boolean isTransitionMetals(TransitionMetals e ){
+        for (TransitionMetals transition: TransitionMetals.values()) {
+            if (transition.getElecrtonegatyvity() == e.getElecrtonegatyvity()){
+                System.out.println(e.getElecrtonegatyvity());
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean isMetalSare(MetalSare e){
+        for (MetalSare metalSare: MetalSare.values()) {
+            if (metalSare.getElecrtonegatyvity() == e.getElecrtonegatyvity()){
+                System.out.println(e.getElecrtonegatyvity());
+                return true;
+            }
+        }
+        return false;
     }
 }

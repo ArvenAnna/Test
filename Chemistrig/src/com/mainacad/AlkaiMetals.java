@@ -1,4 +1,4 @@
-package chemicalElement;
+package com.mainacad;
 
 enum AlkaiMetals {
     Li(3),
@@ -17,4 +17,6 @@ enum AlkaiMetals {
     public int getElecrtonegatyvity() {
         return elecrtonegatyvity;
     }
+
+
 }
