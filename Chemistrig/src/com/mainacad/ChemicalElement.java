@@ -1,55 +1,99 @@
 package com.mainacad;
 
 public class ChemicalElement {
-    String name;
-    int sybol;
-    int atomicNumber;
 
-    public ChemicalElement(String name, int sybol, int atomicNumber) {
+    private String name;
+    private int elecrtonegatyvity;
+
+    ChemicalElement(String name) {
         this.name = name;
-        this.sybol = sybol;
-        this.atomicNumber = atomicNumber;
-    }
-
-    public static boolean isAlcaiMetals(ChemicalElement e) {
-        for (AlkaiMetals alkaiMetals : AlkaiMetals.values()) {
-            if (e.name.equals(alkaiMetals.name())) {
-                System.out.println("This element is AlkaiMetals");
-                return true;
+        if (isTransitionMetals()) {
+            for (TransitionMetals transitionMetals : TransitionMetals.values()) {
+                if (transitionMetals.name().equals(name)) {
+                    elecrtonegatyvity = transitionMetals.getElecrtonegatyvity();
+                }
             }
         }
-        System.out.println("This element is not AlkaiMetals");
-        return false;
-    }
+        if (isMetalSare()) {
+            for (MetalSare metalSare : MetalSare.values()) {
+                if (metalSare.name().equals(name)) {
+                    this.elecrtonegatyvity = metalSare.getElecrtonegatyvity();
 
-    public static boolean isTransitionMetals(ChemicalElement e) {
-        for (TransitionMetals transition : TransitionMetals.values()) {
-            if (transition.name().equals(e.name)) {
-                System.out.println("This element is Transition");
-                return true;
+                }
             }
         }
-        System.out.println("This element is not Transition");
-        return false;
+        if (isAlcaiMetals()) {
+            for (AlkaiMetals alkaiMetals : AlkaiMetals.values()) {
+                if (alkaiMetals.name().equals(name)) {
+                    elecrtonegatyvity = alkaiMetals.getElecrtonegatyvity();
+                }
+            }
+        }
     }
 
-    public static boolean isMetalSare(ChemicalElement e) {
+    ChemicalElement(int elecrtonegatyvity) {
+        this.elecrtonegatyvity = elecrtonegatyvity;
+
+        for (TransitionMetals transitionMetals : TransitionMetals.values()) {
+            if (transitionMetals.getElecrtonegatyvity() == elecrtonegatyvity) {
+                name = transitionMetals.name();
+            }
+        }
         for (MetalSare metalSare : MetalSare.values()) {
-            if (metalSare.name().equals(e.name)) {
-                System.out.println("This element is MetalSare");
+            if (metalSare.getElecrtonegatyvity() == elecrtonegatyvity) {
+                this.elecrtonegatyvity = metalSare.getElecrtonegatyvity();
+                name = metalSare.name();
+            }
+        }
+        for (AlkaiMetals alkaiMetals : AlkaiMetals.values()) {
+            if (alkaiMetals.getElecrtonegatyvity() == elecrtonegatyvity) {
+                name = alkaiMetals.name();
+            }
+        }
+    }
+
+    public boolean isAlcaiMetals() {
+        for (AlkaiMetals alkaiMetals : AlkaiMetals.values()) {
+            if (name.equals(alkaiMetals.name())) {
                 return true;
             }
         }
-        System.out.println("This element is not MetalSare");
         return false;
+    }
+
+    public boolean isTransitionMetals() {
+        for (TransitionMetals transition : TransitionMetals.values()) {
+            if (name.equals(transition.name())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isMetalSare() {
+        for (MetalSare metalSare : MetalSare.values()) {
+            if (name.equals(metalSare.name())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    public int getElecrtonegatyvity() {
+        return elecrtonegatyvity;
+    }
+
+    public String getName() {
+
+        return name;
     }
 
     @Override
     public String toString() {
         return "ChemicalElement{" +
-                "name='" + name + '\'' +
-                ", sybol=" + sybol +
-                ", atomicNumber=" + atomicNumber +
+                "name = '" + name + '\'' +
+                ", elecrtonegatyvity = " + elecrtonegatyvity +
                 '}';
     }
 }

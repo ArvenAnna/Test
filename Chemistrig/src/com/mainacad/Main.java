@@ -1,40 +1,32 @@
 package com.mainacad;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import static com.mainacad.AlkaiMetals.Cs;
-import static com.mainacad.AlkaiMetals.Li;
-import static com.mainacad.MetalSare.Ai;
-import static com.mainacad.MetalSare.Sn;
-import static com.mainacad.NotMetall.C;
-import static com.mainacad.NotMetall.H;
-import static java.lang.Enum.valueOf;
-
 public class Main {
     public static void main(String[] args) {
-        ChemicalElement object = new ChemicalElement("Li", 3, 3);
-        ChemicalElement object2 = new ChemicalElement("Sn", 14, 10);
-        ChemicalElement object3 = new ChemicalElement("C", 5, 2);
-        ChemicalElement[] arr = {object, object2, object3};
 
-        //Arrays.sort(arr, new ComparatorRlectroNegatinity());
+        ChemicalElement object = new ChemicalElement("Li");
+        ChemicalElement object2 = new ChemicalElement("Sn");
+        ChemicalElement object3 = new ChemicalElement("C");
+        ChemicalElement object4 = new ChemicalElement(19);
+        ChemicalElement object5 = new ChemicalElement(49);
+        ChemicalElement object6 = new ChemicalElement(50);
+        ChemicalElement[] arr = {object,object2,object3,object4, object5, object6};
 
-        ChemicalElement.isAlcaiMetals(object2);
-        ChemicalElement.isMetalSare(object2);
-        ChemicalElement.isTransitionMetals(object2);
+
+        // Arrays.sort(arr, new ComparatorRlectroNegatinity());
 
         Arrays.sort(arr, new Comparator<ChemicalElement>() {
                     @Override
                     public int compare(ChemicalElement o1, ChemicalElement o2) {
-                        if (o1.name.equals( "C")) {
+                        if (o1.getName().equals("C")) {
                             return -1;
-                        } else if (o2.name.equals("C")) {
+                        } else if (o2.getName().equals("C")) {
                             return 1;
-                        } else if (o1.sybol > o2.sybol) {
+                        } else if (o1.getElecrtonegatyvity() > o2.getElecrtonegatyvity()) {
                             return 1;
-                        } else if (o2.sybol > o1.sybol) {
+                        } else if (o2.getElecrtonegatyvity() > o1.getElecrtonegatyvity()) {
                             return -1;
                         }
                         return 0;
@@ -42,9 +34,9 @@ public class Main {
                     }
                 }
         );
+
         for (ChemicalElement r : arr) {
             System.out.println(r);
-
         }
     }
 }
