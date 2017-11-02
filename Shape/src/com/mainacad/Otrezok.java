@@ -13,8 +13,7 @@ public class Otrezok {
         this.y1 = y1;
     }
 
-    public double lang() {
-        double xy = Math.sqrt(((x1 - x) * (x1 - x) + (y1 - y) * (y1 - y)));
-        return xy;
+    public double lang(double x, double v, double y, double y1) {
+        return Math.sqrt(((x1 - x) * (x1 - x) + (y1 - y) * (y1 - y)));
     }
 }
