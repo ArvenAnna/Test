@@ -4,6 +4,7 @@ public class ChemicalElement {
 
     private String name;
     private int elecrtonegatyvity;
+    private double atomicMass;
 
     ChemicalElement(String name) {
         this.name = name;
@@ -11,6 +12,7 @@ public class ChemicalElement {
             for (TransitionMetals transitionMetals : TransitionMetals.values()) {
                 if (transitionMetals.name().equals(name)) {
                     elecrtonegatyvity = transitionMetals.getElecrtonegatyvity();
+                    atomicMass = transitionMetals.getAtomicMass();
                 }
             }
         }
@@ -18,7 +20,7 @@ public class ChemicalElement {
             for (MetalSare metalSare : MetalSare.values()) {
                 if (metalSare.name().equals(name)) {
                     this.elecrtonegatyvity = metalSare.getElecrtonegatyvity();
-
+                    atomicMass = metalSare.getAtomicMass();
                 }
             }
         }
@@ -26,6 +28,15 @@ public class ChemicalElement {
             for (AlkaiMetals alkaiMetals : AlkaiMetals.values()) {
                 if (alkaiMetals.name().equals(name)) {
                     elecrtonegatyvity = alkaiMetals.getElecrtonegatyvity();
+                    atomicMass = alkaiMetals.getAtomicMass();
+                }
+            }
+        }
+        if (isNotMetall()) {
+            for (NotMetall notMetall : NotMetall.values()) {
+                if (notMetall.name().equals(name)) {
+                    elecrtonegatyvity = notMetall.getElecrtonegatyvity();
+                    atomicMass = notMetall.getAtomicMass();
                 }
             }
         }
@@ -37,17 +48,59 @@ public class ChemicalElement {
         for (TransitionMetals transitionMetals : TransitionMetals.values()) {
             if (transitionMetals.getElecrtonegatyvity() == elecrtonegatyvity) {
                 name = transitionMetals.name();
+                atomicMass = transitionMetals.getAtomicMass();
             }
         }
         for (MetalSare metalSare : MetalSare.values()) {
             if (metalSare.getElecrtonegatyvity() == elecrtonegatyvity) {
                 this.elecrtonegatyvity = metalSare.getElecrtonegatyvity();
                 name = metalSare.name();
+                atomicMass = metalSare.getAtomicMass();
             }
         }
         for (AlkaiMetals alkaiMetals : AlkaiMetals.values()) {
             if (alkaiMetals.getElecrtonegatyvity() == elecrtonegatyvity) {
                 name = alkaiMetals.name();
+                atomicMass = alkaiMetals.getAtomicMass();
+            }
+        }
+        for (NotMetall notMetall : NotMetall.values()) {
+            if (notMetall.getElecrtonegatyvity() == elecrtonegatyvity) {
+                name = notMetall.name();
+                atomicMass = notMetall.getAtomicMass();
+            }
+        }
+    }
+
+    ChemicalElement(double atomicMass) {
+        this.atomicMass = atomicMass;
+
+
+        for (TransitionMetals transitionMetals : TransitionMetals.values()) {
+            if (transitionMetals.getAtomicMass() == atomicMass) {
+                this.elecrtonegatyvity = transitionMetals.getElecrtonegatyvity();
+                name = transitionMetals.name();
+            }
+        }
+
+        for (MetalSare metalSare : MetalSare.values()) {
+            if (metalSare.getAtomicMass() == atomicMass) {
+                elecrtonegatyvity = metalSare.getElecrtonegatyvity();
+                name = metalSare.name();
+            }
+        }
+
+        for (AlkaiMetals alkaiMetals : AlkaiMetals.values()) {
+            if (alkaiMetals.getAtomicMass() == atomicMass) {
+                elecrtonegatyvity = alkaiMetals.getElecrtonegatyvity();
+                name = alkaiMetals.name();
+            }
+        }
+
+        for (NotMetall notMetall : NotMetall.values()) {
+            if (notMetall.getAtomicMass() == atomicMass) {
+                elecrtonegatyvity = notMetall.getElecrtonegatyvity();
+                name = notMetall.name();
             }
         }
     }
@@ -79,6 +132,14 @@ public class ChemicalElement {
         return false;
     }
 
+    public boolean isNotMetall() {
+        for (NotMetall notMetall : NotMetall.values()) {
+            if (name.equals(notMetall.name())) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public int getElecrtonegatyvity() {
         return elecrtonegatyvity;
@@ -94,6 +155,7 @@ public class ChemicalElement {
         return "ChemicalElement{" +
                 "name = '" + name + '\'' +
                 ", elecrtonegatyvity = " + elecrtonegatyvity +
+                ", atomicMass = " + atomicMass +
                 '}';
     }
 }

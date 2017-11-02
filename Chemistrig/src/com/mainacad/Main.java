@@ -12,8 +12,13 @@ public class Main {
         ChemicalElement object4 = new ChemicalElement(19);
         ChemicalElement object5 = new ChemicalElement(49);
         ChemicalElement object6 = new ChemicalElement(50);
-        ChemicalElement[] arr = {object,object2,object3,object4, object5, object6};
+        ChemicalElement object7 = new ChemicalElement(114.82);
+        ChemicalElement object8 = new ChemicalElement(39.098);
+        ChemicalElement object9 = new ChemicalElement(178.4);
+        ChemicalElement object10 = new ChemicalElement(1);
 
+
+        ChemicalElement[] arr = {object, object2, object3, object4, object5, object6, object7, object8, object9, object10};
 
         // Arrays.sort(arr, new ComparatorRlectroNegatinity());
 

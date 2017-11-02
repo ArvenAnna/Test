@@ -1,24 +1,24 @@
 package com.mainacad;
 
 enum TransitionMetals {
-    Hf(72),
-    Ta(73),
-    W(74),
-    Re(75),
-    Os(76),
-    Ir(77),
-    Pt(78),
-    Au(79);
+    Hf(72, 178.4),
+    Ta(73,180.647),
+    W(74,183.8);
 
     private int elecrtonegatyvity;
+    private double atomicMass;
 
-    private TransitionMetals(int elecrtonegatyvity) {
+    TransitionMetals(int elecrtonegatyvity,double atomicMass) {
         this.elecrtonegatyvity = elecrtonegatyvity;
+        this.atomicMass = atomicMass;
     }
 
     public int getElecrtonegatyvity() {
         return elecrtonegatyvity;
     }
 
+    public double getAtomicMass() {
+        return atomicMass;
+    }
 
 }
