@@ -146,8 +146,7 @@ public class ChemicalElement {
     }
 
     public String getName() {
-
-        return name;
+       return name;
     }
 
     @Override

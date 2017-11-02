@@ -18,6 +18,7 @@ public class Main {
         ChemicalElement object10 = new ChemicalElement(1);
 
 
+
         ChemicalElement[] arr = {object, object2, object3, object4, object5, object6, object7, object8, object9, object10};
 
         // Arrays.sort(arr, new ComparatorRlectroNegatinity());
@@ -39,6 +40,7 @@ public class Main {
                     }
                 }
         );
+
 
         for (ChemicalElement r : arr) {
             System.out.println(r);

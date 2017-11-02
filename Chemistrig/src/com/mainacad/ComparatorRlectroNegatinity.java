@@ -2,9 +2,17 @@ package com.mainacad;
 
 import java.util.Comparator;
 
-public class ComparatorRlectroNegatinity implements Comparator {
-    @Override
-    public int compare(Object o1, Object o2) {
-        throw new UnsupportedOperationException();
+public class ComparatorRlectroNegatinity implements Comparator <ChemicalElement> {
+
+    public int compare(ChemicalElement o1, ChemicalElement o2) {
+
+            if (o1.getElecrtonegatyvity() > o2.getElecrtonegatyvity()) {
+                return 1;
+            } else if (o1.getElecrtonegatyvity() < o2.getElecrtonegatyvity()) {
+                return -1;
+            }
+                return 0;
+
+            //throw new UnsupportedOperationException();
     }
 }
