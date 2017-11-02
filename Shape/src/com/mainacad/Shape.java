@@ -3,7 +3,7 @@ package com.mainacad;
 public abstract class Shape implements Constructable, Paintable {
     protected int POINTS_COUNT;
     protected Point[] points;
-//test
+
     public Shape(Point[] points, int POINTS_COUNT) { //changed by Zhuravel Andrey, was = public Realisation)
         this.POINTS_COUNT = POINTS_COUNT;
         if (points.length != POINTS_COUNT) {
