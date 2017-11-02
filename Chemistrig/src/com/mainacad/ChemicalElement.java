@@ -53,6 +53,7 @@ public class ChemicalElement {
         }
         for (MetalSare metalSare : MetalSare.values()) {
             if (metalSare.getElecrtonegatyvity() == elecrtonegatyvity) {
+                this.elecrtonegatyvity = metalSare.getElecrtonegatyvity();
                 name = metalSare.name();
                 atomicMass = metalSare.getAtomicMass();
             }
@@ -73,9 +74,11 @@ public class ChemicalElement {
 
     ChemicalElement(double atomicMass) {
         this.atomicMass = atomicMass;
+
+
         for (TransitionMetals transitionMetals : TransitionMetals.values()) {
             if (transitionMetals.getAtomicMass() == atomicMass) {
-                elecrtonegatyvity = transitionMetals.getElecrtonegatyvity();
+                this.elecrtonegatyvity = transitionMetals.getElecrtonegatyvity();
                 name = transitionMetals.name();
             }
         }
@@ -143,7 +146,7 @@ public class ChemicalElement {
     }
 
     public String getName() {
-        return name;
+       return name;
     }
 
     @Override
