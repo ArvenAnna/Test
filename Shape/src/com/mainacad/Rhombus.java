@@ -8,7 +8,6 @@ public class Rhombus extends Shape {
         super(points,4);
     }
 
-
     @Override
     public void paintingShape() {
         System.out.println("This is Rhombus");
