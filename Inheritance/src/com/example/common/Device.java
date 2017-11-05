@@ -1,11 +1,23 @@
 package com.example.common;
 
+/*
+This class Create a Device using a constructor with manufacturer, price and serialnumber parameters.
+Also this class have a getter and setter for these parameters.
+This class also have a getDeviceParameters method, and overriding methods: equals and hashcode.
+ */
+
+
 public class Device {
 
-    //Alexey Syrovatko
     private String manufacturer;
     private float price;
     private String serialNumber;
+
+    public Device(String manufacturer, float price, String serialNumber) {
+        this.manufacturer = manufacturer;
+        this.price = price;
+        this.serialNumber = serialNumber;
+    }
 
     public String getManufacturer() {
         return manufacturer;
@@ -30,12 +42,11 @@ public class Device {
     public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
-    //Alexey Syrovatko
 
-    public void getParameters() {
-        System.out.println("manufacturer");
-        System.out.println("serialnumber");
-        System.out.println("price");
+    public void getDeviceParameters() {
+        System.out.println(("Manufacturer is a:") + this.manufacturer);
+        System.out.println(("Price is a:") + this.price);
+        System.out.println(("Serialnumber is a:") + this.serialNumber);
     }
 
     @Override

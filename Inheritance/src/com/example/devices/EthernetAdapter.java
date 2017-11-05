@@ -1,12 +1,22 @@
 package com.example.devices;
 
+/*
+This class Create a EthernetAdapter and using a super constructor from Device class with
+manufacturer, price and serialnumber parameters and individual parameters for EthernetAdapter.
+ */
+
 import com.example.common.Device;
 
 public class EthernetAdapter extends Device {
 
-    //AlexeySyrovatko
     private int speed;
     private String mac;
+
+    public EthernetAdapter(String manufacturer, float price, String serialNumber, int speed, String mac) {
+        super(manufacturer, price, serialNumber);
+        this.speed = speed;
+        this.mac = mac;
+    }
 
     public int getSpeed() {
         return speed;
@@ -23,13 +33,17 @@ public class EthernetAdapter extends Device {
     public void setMac(String mac) {
         this.mac = mac;
     }
-    //Alexey Syrovatko
 
-    public void getParameters() {
-        System.out.println("speed");
-        System.out.println("mac");
-
+    public void getEthernetAdapterParameters() {
+        System.out.println(("EthernetAdapter Mac is a:") + this.getSpeed());
+        System.out.println(("EthernetAdapter Speed is a") + this.getMac());
     }
+
+    public void getDeviceParameters() {
+        super.getDeviceParameters();
+        this.getEthernetAdapterParameters();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
