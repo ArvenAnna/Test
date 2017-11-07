@@ -19,25 +19,29 @@ public class Main {
 
         ChemicalElement[] arr = {object, object2, object3, object4, object5, object6, object7, object8, object9, object10};
 
+        System.out.println("This is Comparator sorting");
         Arrays.sort(arr, new ComparatorRlectroNegatinity());
         for (ChemicalElement r : arr) {
             System.out.println(r);
         }
+
         System.out.println();
 
-        Arrays.sort(arr, (o1, o2) -> {
-            if (o1.getName().equals("C")) {
-                return -1;
-            } else if (o2.getName().equals("C")) {
-                return 1;
-            } else if (o1.getElecrtonegatyvity() > o2.getElecrtonegatyvity()) {
-                return 1;
-            } else if (o2.getElecrtonegatyvity() > o1.getElecrtonegatyvity()) {
-                return -1;
-            }
-            return 0;
+        System.out.println("This is Hill sorting");
 
-        }
+        Arrays.sort(arr, (o1, o2) -> {
+                    if (o1.getName().equals("C")) {
+                        return -1;
+                    } else if (o2.getName().equals("C")) {
+                        return 1;
+                    } else if (o1.getElecrtonegatyvity() > o2.getElecrtonegatyvity()) {
+                        return 1;
+                    } else if (o2.getElecrtonegatyvity() > o1.getElecrtonegatyvity()) {
+                        return -1;
+                    }
+                    return 0;
+
+                }
         );
 
         for (ChemicalElement r : arr) {

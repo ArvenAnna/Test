@@ -70,10 +70,13 @@ public class ChemicalElement {
     }
 
     private void checkingElement() {
-        if (isTransitionMetals()) ;
-        else if (isNotMetall()) ;
-        else if (isAlcaiMetals()) ;
-        else if (isMetalSare()) ;
+        for (int i = 0; i < 4; i++) {
+            if (isTransitionMetals()) break;
+            else if (isNotMetall()) break;
+            else if (isAlcaiMetals()) break;
+            else if (isMetalSare()) break;
+        }
+
     }
 
     int getElecrtonegatyvity() {
