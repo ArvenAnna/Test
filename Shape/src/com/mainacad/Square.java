@@ -13,10 +13,4 @@ public class Square extends Shape  {
         System.out.println("This is my square");
     }
 
-    @Override
-    public Color getColor() {
-        return Color.CORAL;
-    }
-
-
 }

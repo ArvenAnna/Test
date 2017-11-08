@@ -1,5 +1,7 @@
 package com.mainacad;
 
+import javafx.scene.paint.Color;
+
 public abstract class Shape implements Constructable, Paintable {
     protected int POINTS_COUNT;
     protected Point[] points;
@@ -39,6 +41,11 @@ public abstract class Shape implements Constructable, Paintable {
         }
         perimeter += otr.lang(points[POINTS_COUNT - 1].getX(), points[0].getX(), points[POINTS_COUNT - 1].getY(), points[0].getY());
         return perimeter;
+    }
+
+    @Override
+    public Color getColor() {
+        return Color.RED;
     }
 
     @Override

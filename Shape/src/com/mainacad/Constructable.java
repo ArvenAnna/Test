@@ -1,5 +1,7 @@
 package com.mainacad;
 
+import javafx.scene.paint.Color;
+
 public interface Constructable {
     /**
      * Get area for filling the shape
@@ -21,4 +23,10 @@ public interface Constructable {
      * @return String which will be applied for current shape
      */
     void paintingShape();
+
+
+
+    default Color getColor() {
+        return Color.CORAL;
+    }
 }
