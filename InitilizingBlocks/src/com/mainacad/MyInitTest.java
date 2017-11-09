@@ -29,16 +29,9 @@ public class MyInitTest extends MyInitTestParent {
 
 
     public MyInitTest() {
-        // this(30);
-        // height = 30;
         System.out.println("constructor 2");
         id = 0;
     }
-
-    //    public MyInitTest(int height) {
-//        this.height = height;
-//        System.out.println("constructor 1");
-//    }
 
     MyInitTest(int id) {
         this.id = id;
