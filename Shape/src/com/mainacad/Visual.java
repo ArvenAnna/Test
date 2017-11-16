@@ -26,13 +26,13 @@ public class Visual extends Application {
     }
 
     private void testShape(GraphicsContext gc) {
-        Point p1 = new Point(50,50);
-        Point p4 = new Point(50,100);
-        Point p3 = new Point(100,100);
-        Point p2 = new Point(100,50);
+        Point p1 = new Point(50, 50);
+        Point p4 = new Point(50, 100);
+        Point p3 = new Point(100, 100);
+        Point p2 = new Point(100, 50);
 
 
-       Paintable square = new Square(new Point[]{p1, p2, p3, p4});
+        Paintable square = new Square(new Point[]{p1, p2, p3, p4});
 
         drawShape(gc, square);
     }
@@ -49,6 +49,6 @@ public class Visual extends Application {
         }
 
         gc.setFill(shape.getColor());
-        gc.fillPolygon(xCoords,yCoords, points.length);
+        gc.fillPolygon(xCoords, yCoords, points.length);
     }
 }
