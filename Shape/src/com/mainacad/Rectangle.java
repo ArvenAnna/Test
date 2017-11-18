@@ -18,7 +18,7 @@ public class Rectangle extends Shape { //changed by Zhuravel Andrey, inheritance
     }
 
     @Override
-    public Color getColor() {
+    public Color getColor(){
         return Color.GREEN;
     }
 }
